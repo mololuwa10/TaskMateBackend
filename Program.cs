@@ -3,6 +3,8 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Backend.Data;
 using Backend.Models;
+using DotNetEnv;
+
 // using Backend.Service;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
@@ -17,13 +19,26 @@ var builder = WebApplication.CreateBuilder(args);
 // Load environment variables from .env file
 DotNetEnv.Env.Load();
 
-// var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
-// var dbPort = Environment.GetEnvironmentVariable("DB_PORT");
-// var dbName = Environment.GetEnvironmentVariable("DB_NAME");
-// var dbUser = Environment.GetEnvironmentVariable("DB_USER");
-// var dbPass = Environment.GetEnvironmentVariable("DB_PASS");
+builder.Configuration["ConnectionStrings:DefaultConnection"] =  $"Host={Env.GetString("DB_HOST")};Port={Env.GetString("DB_PORT")};Database={Env.GetString("DB_NAME")};Username={Env.GetString("DB_USER")};Password={Env.GetString("DB_PASSWORD")}";
+builder.Configuration["Jwt:Issuer"] = Env.GetString("JWT_ISSUER");
+builder.Configuration["Jwt:Audience"] = Env.GetString("JWT_AUDIENCE");
+builder.Configuration["Jwt:Key"] = Env.GetString("JWT_KEY");
+builder.Configuration["Jwt:ExpiresInMinutes"] = Env.GetString("JWT_EXPIRES_IN_MINUTES");
 
-// var connectionString = $"Host={dbHost}; Port={dbPort}; Database={dbName}; Username={dbUser}; Password={dbPass};";
+builder.Configuration["Firebase:Web:apiKey"] = Env.GetString("FIREBASE_API_KEY");
+builder.Configuration["Firebase:Web:authDomain"] = Env.GetString("FIREBASE_AUTH_DOMAIN");
+builder.Configuration["Firebase:Web:projectId"] = Env.GetString("FIREBASE_PROJECT_ID");
+builder.Configuration["Firebase:Web:storageBucket"] = Env.GetString("FIREBASE_STORAGE_BUCKET");
+builder.Configuration["Firebase:Web:messagingSenderId"] = Env.GetString("FIREBASE_MESSAGING_SENDER_ID");
+builder.Configuration["Firebase:Web:appId"] = Env.GetString("FIREBASE_APP_ID");
+builder.Configuration["Firebase:Web:measurementId"] = Env.GetString("FIREBASE_MEASUREMENT_ID");
+
+builder.Configuration["GoogleKeys:ClientId"] = Env.GetString("GOOGLE_CLIENT_ID");
+builder.Configuration["GoogleKeys:ClientSecret"] = Env.GetString("GOOGLE_CLIENT_SECRET");
+
+builder.Configuration["Kestrel:Endpoints:Http:Url"] = Env.GetString("KESTREL_URL");
+
+builder.Configuration.AddEnvironmentVariables();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -1,303 +1,303 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\..bundle.scp.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\..bundle.scp.css",
       "PackagePath": "staticwebassets\\..bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\028d29a9-0f77-4655-9d9b-9a29d8e1f15c.png",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\028d29a9-0f77-4655-9d9b-9a29d8e1f15c.png",
       "PackagePath": "staticwebassets\\uploads\\028d29a9-0f77-4655-9d9b-9a29d8e1f15c.png"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\0dafaf3a-3aa2-4f20-88ec-cb9e9c3b97a4.png",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\0dafaf3a-3aa2-4f20-88ec-cb9e9c3b97a4.png",
       "PackagePath": "staticwebassets\\uploads\\0dafaf3a-3aa2-4f20-88ec-cb9e9c3b97a4.png"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\245e7815-9780-409a-b7b6-7f099f3ed0e5.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\245e7815-9780-409a-b7b6-7f099f3ed0e5.jpg",
       "PackagePath": "staticwebassets\\uploads\\245e7815-9780-409a-b7b6-7f099f3ed0e5.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\3f216b88-f33b-4c57-9b91-c7c62c889e30.jpeg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\3f216b88-f33b-4c57-9b91-c7c62c889e30.jpeg",
       "PackagePath": "staticwebassets\\uploads\\3f216b88-f33b-4c57-9b91-c7c62c889e30.jpeg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\653f6917-09ca-43e1-98ef-291d9c15e6af.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\653f6917-09ca-43e1-98ef-291d9c15e6af.jpg",
       "PackagePath": "staticwebassets\\uploads\\653f6917-09ca-43e1-98ef-291d9c15e6af.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\66358f23-0fb1-4e89-b9bd-0f44ffb31fdf.png",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\66358f23-0fb1-4e89-b9bd-0f44ffb31fdf.png",
       "PackagePath": "staticwebassets\\uploads\\66358f23-0fb1-4e89-b9bd-0f44ffb31fdf.png"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\7d656c8e-632c-4945-bf70-7f5a69d9fe79.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\7d656c8e-632c-4945-bf70-7f5a69d9fe79.jpg",
       "PackagePath": "staticwebassets\\uploads\\7d656c8e-632c-4945-bf70-7f5a69d9fe79.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\8ae4f1a3-63f9-4fe1-b2e0-7f31c94bcd90.jpeg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\8ae4f1a3-63f9-4fe1-b2e0-7f31c94bcd90.jpeg",
       "PackagePath": "staticwebassets\\uploads\\8ae4f1a3-63f9-4fe1-b2e0-7f31c94bcd90.jpeg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\9d1d7e18-38f3-4b9a-ae12-c3f6ded6fdbc.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\9d1d7e18-38f3-4b9a-ae12-c3f6ded6fdbc.jpg",
       "PackagePath": "staticwebassets\\uploads\\9d1d7e18-38f3-4b9a-ae12-c3f6ded6fdbc.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\b371b53c-7aa3-4e5c-b36e-e4b6e6a702ad.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\b371b53c-7aa3-4e5c-b36e-e4b6e6a702ad.jpg",
       "PackagePath": "staticwebassets\\uploads\\b371b53c-7aa3-4e5c-b36e-e4b6e6a702ad.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\b5fb2d81-97d7-40c2-a571-c93e97a20059.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\b5fb2d81-97d7-40c2-a571-c93e97a20059.jpg",
       "PackagePath": "staticwebassets\\uploads\\b5fb2d81-97d7-40c2-a571-c93e97a20059.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\d2774f69-1308-4650-98be-9a3c65c8cdf6.png",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\d2774f69-1308-4650-98be-9a3c65c8cdf6.png",
       "PackagePath": "staticwebassets\\uploads\\d2774f69-1308-4650-98be-9a3c65c8cdf6.png"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\d744aa0c-5072-4350-aed8-82fe6c8419ee.jpg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\d744aa0c-5072-4350-aed8-82fe6c8419ee.jpg",
       "PackagePath": "staticwebassets\\uploads\\d744aa0c-5072-4350-aed8-82fe6c8419ee.jpg"
     },
     {
-      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\taskmate-web-app\\Backend\\wwwroot\\uploads\\fc3d3fa1-509c-4abf-b029-0fe2b863196b.jpeg",
+      "Id": "C:\\Users\\segil\\OneDrive\\Documents\\Projects\\TaskMateBackend\\wwwroot\\uploads\\fc3d3fa1-509c-4abf-b029-0fe2b863196b.jpeg",
       "PackagePath": "staticwebassets\\uploads\\fc3d3fa1-509c-4abf-b029-0fe2b863196b.jpeg"
     },
     {

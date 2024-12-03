@@ -1,4 +1,4 @@
-appsettings.json
+# appsettings.json
 
 commentedCode.tsxt
 
@@ -11,3 +11,5 @@ task-mate-firebase-ios.plist
 .env
 
 bin
+
+comentedcode.txt
