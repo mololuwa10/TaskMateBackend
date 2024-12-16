@@ -11,203 +11,202 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Controllers.TaskController
 {
-	[ApiController]
-	[Route("api/subtasks")]
-	public class SubTaskController : ControllerBase
-	{
-		private readonly ApplicationDbContext context;
+    [ApiController]
+    [Route("api/subtasks")]
+    public class SubTaskController : ControllerBase
+    {
+        private readonly ApplicationDbContext context;
 
-		public SubTaskController(ApplicationDbContext context)
-		{
-			this.context = context;
-		}
+        public SubTaskController(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
 
-		// Get all subtasks by subtask id
-		[HttpGet("{id}")]
-		public async Task<ActionResult<SubTasks>> GetSubTask(int id)
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if (string.IsNullOrEmpty(userId))
-			{
-				return Unauthorized("User must be logged in");
-			}
+        // Get all subtasks by subtask id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SubTasks>> GetSubTask(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
 
-			var subTask = await context
-				.SubTasks.Include(s => s.Task) 
-				.FirstOrDefaultAsync(s => s.SubTaskId == id);
-				
-			if (subTask == null)
-			{
-				return NotFound();
-			}
+            var subTask = await context
+                .SubTasks.Include(s => s.Task)
+                .FirstOrDefaultAsync(s => s.SubTaskId == id);
 
-			// Check if the user owns the task associated with the subtask
-			if (subTask.Task == null || subTask.Task.UserId != userId)
-			{
-				return Forbid("You do not have permission to view this subtask.");
-			}
+            if (subTask == null)
+            {
+                return NotFound();
+            }
 
-			return Ok(subTask);
-		}
+            // Check if the user owns the task associated with the subtask
+            if (subTask.Task == null || subTask.Task.UserId != userId)
+            {
+                return Forbid("You do not have permission to view this subtask.");
+            }
 
-		// Get Subtask by task Id
-		[HttpGet("task/{taskId}")]
-		public async Task<ActionResult<IEnumerable<SubTasks>>> GetSubTasks(int taskId)
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if (string.IsNullOrEmpty(userId))
-			{
-				return Unauthorized("User must be logged in");
-			}
+            return Ok(subTask);
+        }
 
-			var taskExists = await context.ToDoItems.AnyAsync(t =>
-				t.TaskId == taskId && t.UserId == userId
-			);
+        // Get Subtask by task Id
+        [HttpGet("task/{taskId}")]
+        public async Task<ActionResult<IEnumerable<SubTasks>>> GetSubTasks(int taskId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
 
-			if (!taskExists)
-			{
-				return NotFound(
-					"Task not found or you do not have permission to view its subtasks."
-				);
-			}
+            var taskExists = await context.ToDoItems.AnyAsync(t =>
+                t.TaskId == taskId && t.UserId == userId
+            );
 
-			var subTasks = await context
-				.SubTasks.Include(s => s.Task)
-				.Where(s => s.TaskId == taskId)
-				.ToListAsync();
-			return Ok(subTasks);
-		}
+            if (!taskExists)
+            {
+                return NotFound(
+                    "Task not found or you do not have permission to view its subtasks."
+                );
+            }
 
-		// Add Subtask
-		[HttpPost]
-		public async Task<ActionResult<SubTasks>> PostSubTask(CreateSubTaskDTO createSubTaskDTO)
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if (string.IsNullOrEmpty(userId))
-			{
-				return Unauthorized("User must be logged in");
-			}
+            var subTasks = await context
+                .SubTasks.Include(s => s.Task)
+                .Where(s => s.TaskId == taskId)
+                .ToListAsync();
+            return Ok(subTasks);
+        }
 
-			var task = await context.ToDoItems.FirstOrDefaultAsync(t =>
-				t.TaskId == createSubTaskDTO.TaskId && t.UserId == userId
-			);
-			if (task == null)
-			{
-				return NotFound(
-					"Task not found or you do not have permission to add a subtask to this task."
-				);
-			}
-			var subTask = new SubTasks
-			{
-				SubTaskName = createSubTaskDTO.SubTaskName,
-				SubtaskDescription = createSubTaskDTO.SubtaskDescription,
-				SubtaskIsCompleted = false,
-				SubtaskDueDate = createSubTaskDTO.SubtaskDueDate,
-				TaskId = createSubTaskDTO.TaskId,
-			};
+        // Add Subtask
+        [HttpPost]
+        public async Task<ActionResult<SubTasks>> PostSubTask(CreateSubTaskDTO createSubTaskDTO)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
 
-			context.SubTasks.Add(subTask);
-			await context.SaveChangesAsync();
+            var task = await context.ToDoItems.FirstOrDefaultAsync(t =>
+                t.TaskId == createSubTaskDTO.TaskId && t.UserId == userId
+            );
+            if (task == null)
+            {
+                return NotFound(
+                    "Task not found or you do not have permission to add a subtask to this task."
+                );
+            }
+            var subTask = new SubTasks
+            {
+                SubTaskName = createSubTaskDTO.SubTaskName,
+                SubtaskDescription = createSubTaskDTO.SubtaskDescription,
+                SubtaskIsCompleted = false,
+                SubtaskDueDate = createSubTaskDTO.SubtaskDueDate,
+                TaskId = createSubTaskDTO.TaskId,
+            };
 
-			return CreatedAtAction(nameof(GetSubTasks), new { id = subTask.SubTaskId }, subTask);
-		}
+            context.SubTasks.Add(subTask);
+            await context.SaveChangesAsync();
 
-		// Update Subtask
-		[HttpPut("{id}")]
-		public async Task<IActionResult> PutSubTask(int id, UpdateSubTaskDTO updateSubTaskDTO)
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if (string.IsNullOrEmpty(userId))
-			{
-				return Unauthorized("User must be logged in");
-			}
+            return CreatedAtAction(nameof(GetSubTasks), new { id = subTask.SubTaskId }, subTask);
+        }
 
-			// var task = await context.ToDoItems.FirstOrDefaultAsync(t => t.TaskId == updateSubTaskDTO.TaskId && t.UserId == userId);
-			// if (task == null)
-			// {
-			// 	return NotFound("Task not found or you do not have permission to update this subtask.");
-			// }
+        // Update Subtask
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSubTask(int id, UpdateSubTaskDTO updateSubTaskDTO)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
 
-			var subTask = await context.SubTasks.FindAsync(id);
+            // var task = await context.ToDoItems.FirstOrDefaultAsync(t => t.TaskId == updateSubTaskDTO.TaskId && t.UserId == userId);
+            // if (task == null)
+            // {
+            // 	return NotFound("Task not found or you do not have permission to update this subtask.");
+            // }
 
-			if (subTask == null)
-			{
-				return NotFound();
-			}
+            var subTask = await context.SubTasks.FindAsync(id);
 
-			subTask.SubTaskName = updateSubTaskDTO.SubTaskName;
-			subTask.SubtaskDescription = updateSubTaskDTO.SubtaskDescription;
-			subTask.SubtaskDueDate = updateSubTaskDTO.SubtaskDueDate;
-			subTask.SubtaskIsCompleted = updateSubTaskDTO.SubtaskIsCompleted;
+            if (subTask == null)
+            {
+                return NotFound();
+            }
 
-			await context.SaveChangesAsync();
+            subTask.SubTaskName = updateSubTaskDTO.SubTaskName;
+            subTask.SubtaskDescription = updateSubTaskDTO.SubtaskDescription;
+            subTask.SubtaskDueDate = updateSubTaskDTO.SubtaskDueDate;
+            subTask.SubtaskIsCompleted = updateSubTaskDTO.SubtaskIsCompleted;
 
-			return Ok(subTask);
-		}
+            await context.SaveChangesAsync();
 
-		// Delete Subtask
-		[HttpDelete("{id}")]
-		public async Task<IActionResult> DeleteSubTask(int id)
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if (string.IsNullOrEmpty(userId))
-			{
-				return Unauthorized("User must be logged in");
-			}
+            return Ok(subTask);
+        }
 
-			var subTask = await context.SubTasks.FindAsync(id);
-			if (subTask == null)
-			{
-				return NotFound();
-			}
+        // Delete Subtask
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSubTask(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
 
-			context.SubTasks.Remove(subTask);
-			await context.SaveChangesAsync();
+            var subTask = await context.SubTasks.FindAsync(id);
+            if (subTask == null)
+            {
+                return NotFound();
+            }
 
-			return NoContent();
-		}
-		
-		// Mark subtask as complete
-		[HttpPut("complete/{subTaskId}")]
-		
-		public async Task<IActionResult> CompleteSubTask(int subTaskId) 
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if(string.IsNullOrEmpty(userId)) 
-			{
-				return Unauthorized("User must be logged in");
-			}
+            context.SubTasks.Remove(subTask);
+            await context.SaveChangesAsync();
 
-			var subTask = await context.SubTasks.FindAsync(subTaskId);
-			if(subTask == null) 
-			{
-				return NotFound();
-			}
-			
-			subTask.SubtaskIsCompleted = true;
-			await context.SaveChangesAsync();
-			return Ok(subTask);
-		}
-		
-		// Mark subtask as in-complete
-		[HttpPut("in-complete/{subTaskId}")]
-		public async Task<IActionResult> InCompleteSubTask(int subTaskId) 
-		{
-			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			if(string.IsNullOrEmpty(userId)) 
-			{
-				return Unauthorized("User must be logged in");
-			}
+            return NoContent();
+        }
 
-			var subTask = await context.SubTasks.FindAsync(subTaskId);
-			if(subTask == null) 
-			{
-				return NotFound();
-			}
-			
-			subTask.SubtaskIsCompleted = false;
-			await context.SaveChangesAsync();
-			return Ok(subTask);
-		}
-	}
+        // Mark subtask as complete
+        [HttpPut("complete/{subTaskId}")]
+        public async Task<IActionResult> CompleteSubTask(int subTaskId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
+
+            var subTask = await context.SubTasks.FindAsync(subTaskId);
+            if (subTask == null)
+            {
+                return NotFound();
+            }
+
+            subTask.SubtaskIsCompleted = true;
+            await context.SaveChangesAsync();
+            return Ok(subTask);
+        }
+
+        // Mark subtask as in-complete
+        [HttpPut("in-complete/{subTaskId}")]
+        public async Task<IActionResult> InCompleteSubTask(int subTaskId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User must be logged in");
+            }
+
+            var subTask = await context.SubTasks.FindAsync(subTaskId);
+            if (subTask == null)
+            {
+                return NotFound();
+            }
+
+            subTask.SubtaskIsCompleted = false;
+            await context.SaveChangesAsync();
+            return Ok(subTask);
+        }
+    }
 }

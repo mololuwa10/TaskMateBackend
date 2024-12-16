@@ -9,48 +9,49 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Data
 {
-	public class ApplicationDbContext : DbContext
-	{
-		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {}
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) { }
 
-		public DbSet<ToDoItem> ToDoItems { get; set; }
-		public DbSet<Category> Categories { get; set; }
-		
-		public DbSet<Reccurence> Reccurences { get; set; }
+        public DbSet<ToDoItem> ToDoItems { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-		public DbSet<Attachment> Attachments { get; set; }
+        public DbSet<Reccurence> Reccurences { get; set; }
 
-		public DbSet<SubTasks> SubTasks { get; set; }
+        public DbSet<Attachment> Attachments { get; set; }
 
-		public DbSet<User> Users { get; set; }
-		
-		// public override int SaveChanges()
-		// {
-		// 	ConvertDatesToUtc();
-		// 	return base.SaveChanges();
-		// }
+        public DbSet<SubTasks> SubTasks { get; set; }
 
-		// public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-		// {
-		// 	ConvertDatesToUtc();
-		// 	return base.SaveChangesAsync(cancellationToken);
-		// }
+        public DbSet<User> Users { get; set; }
 
-		// private void ConvertDatesToUtc()
-		// {
-		// 	var entries = ChangeTracker.Entries()
-		// 		.Where(e => e.Entity is User && (e.State == EntityState.Added || e.State == EntityState.Modified));
+        // public override int SaveChanges()
+        // {
+        // 	ConvertDatesToUtc();
+        // 	return base.SaveChanges();
+        // }
 
-		// 	foreach (var entityEntry in entries)
-		// 	{
-		// 		var user = (User)entityEntry.Entity;
-		// 		user.DateCreated = user.DateCreated?.ToUtc();
-		// 	}
-		// }
-		
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
-			base.OnModelCreating(modelBuilder);
-		}
-	}
+        // public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        // {
+        // 	ConvertDatesToUtc();
+        // 	return base.SaveChangesAsync(cancellationToken);
+        // }
+
+        // private void ConvertDatesToUtc()
+        // {
+        // 	var entries = ChangeTracker.Entries()
+        // 		.Where(e => e.Entity is User && (e.State == EntityState.Added || e.State == EntityState.Modified));
+
+        // 	foreach (var entityEntry in entries)
+        // 	{
+        // 		var user = (User)entityEntry.Entity;
+        // 		user.DateCreated = user.DateCreated?.ToUtc();
+        // 	}
+        // }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+    }
 }

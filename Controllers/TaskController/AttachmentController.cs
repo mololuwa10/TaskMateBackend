@@ -8,8 +8,5 @@ namespace Backend.Controllers.TaskController
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AttachmentController : ControllerBase
-    {
-        
-    }
+    public class AttachmentController : ControllerBase { }
 }

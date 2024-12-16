@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace Backend.Data
 {
-	public static class DateTimeExtensions
-	{
-		public static DateTime ToUtc(this DateTime dateTime) 
-		{
-			if (dateTime.Kind == DateTimeKind.Utc) 
-			{
-				return dateTime;
-			}
+    public static class DateTimeExtensions
+    {
+        public static DateTime ToUtc(this DateTime dateTime)
+        {
+            if (dateTime.Kind == DateTimeKind.Utc)
+            {
+                return dateTime;
+            }
 
-			return dateTime.ToUniversalTime();
-		}
-	}
+            return dateTime.ToUniversalTime();
+        }
+    }
 }
