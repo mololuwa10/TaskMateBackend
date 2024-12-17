@@ -42,6 +42,6 @@ namespace Backend.Models.Task
         // Navigation property for related user
         public User? User { get; set; }
         public int? CategoryId { get; set; }
-        public Backend.Models.Category.Category? TaskCategory { get; set; } // e.g., Work, Personal
+        public Models.Category.Category? TaskCategory { get; set; } // e.g., Work, Personal
     }
 }
