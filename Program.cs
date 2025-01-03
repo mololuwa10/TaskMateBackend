@@ -38,8 +38,6 @@ builder.Configuration["GoogleKeys:ClientSecret"] = Env.GetString("GOOGLE_CLIENT_
 
 builder.Configuration["Kestrel:Endpoints:Http:Url"] = Env.GetString("KESTREL_URL");
 
-builder.Configuration.AddEnvironmentVariables();
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
