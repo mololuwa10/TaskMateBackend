@@ -1,23 +1,29 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using _.Models;
+using Npgsql;
+using Microsoft.Extensions.Configuration;
 
 namespace _.Controllers;
 
-public class HomeController : Controller
+public class HomeController(ILogger<HomeController> logger) : Controller
 {
-	private readonly ILogger<HomeController> _logger;
+	private readonly ILogger<HomeController> _logger = logger;
+	
+	private readonly IConfiguration? _configuration;
 
-	public HomeController(ILogger<HomeController> logger)
-	{
-		_logger = logger;
-	}
-
-	public IActionResult Index()
+    public IActionResult Index()
 	{
 		_logger.LogInformation("Checking database connection....");
-		return View();
+
+		if (!CheckDatabaseConnection())
+		{
+			return StatusCode(500, "Failed to connect to the database");
+		}
+
+		return Ok("Database connection successful");
 	}
+
 
 	public IActionResult Privacy()
 	{
@@ -29,4 +35,22 @@ public class HomeController : Controller
 	{
 		return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 	}
+	
+	public bool CheckDatabaseConnection()
+	{
+		try
+		{
+			using (var connection = new NpgsqlConnection(_configuration?.GetConnectionString("ConnectionStrings:DefaultConnection")))
+			{
+				connection.Open(); // Attempt to open a connection
+				return true; // Connection successful
+			}
+		}
+		catch (Exception ex)
+		{
+			_logger.LogError("Database connection failed: {Message}", ex.Message);
+			return false;
+		}
+	}
+
 }

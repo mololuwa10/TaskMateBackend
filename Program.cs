@@ -19,7 +19,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Load environment variables from .env file
 DotNetEnv.Env.Load();
 
-builder.Configuration["ConnectionStrings:DefaultConnection"] =  $"Host={Env.GetString("DB_HOST")};Port={Env.GetString("DB_PORT")};Database={Env.GetString("DB_NAME")};Username={Env.GetString("DB_USER")};Password={Env.GetString("DB_PASSWORD")}";
+Console.WriteLine($"DB_HOST: {Env.GetString("DB_HOST")}");
+Console.WriteLine($"DB_PORT: {Env.GetString("DB_PORT")}");
+Console.WriteLine($"DB_NAME: {Env.GetString("DB_NAME")}");
+Console.WriteLine($"DB_USER: {Env.GetString("DB_USER")}");
+Console.WriteLine($"DB_PASSWORD: {Env.GetString("DB_PASSWORD")}");
+Console.WriteLine($"Kestrel url: {Env.GetString("KESTREL_URL")}");
+Console.WriteLine("Current Directory: " + Directory.GetCurrentDirectory());
+
+builder.Configuration["ConnectionStrings:DefaultConnection"] = $"Host={Env.GetString("DB_HOST")};Port={Env.GetString("DB_PORT")};Database={Env.GetString("DB_NAME")};Username={Env.GetString("DB_USER")};Password={Env.GetString("DB_PASSWORD")}";
 builder.Configuration["Jwt:Issuer"] = Env.GetString("JWT_ISSUER");
 builder.Configuration["Jwt:Audience"] = Env.GetString("JWT_AUDIENCE");
 builder.Configuration["Jwt:Key"] = Env.GetString("JWT_KEY");
@@ -51,7 +59,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+
 builder.Configuration.AddEnvironmentVariables();
+
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
 
 // Add Identity services
 builder
@@ -147,15 +159,27 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
 	app.UseExceptionHandler("/Home/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+// Comment out this middleware if HTTPS is not required:
+// app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
