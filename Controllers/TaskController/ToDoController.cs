@@ -37,8 +37,8 @@ namespace Backend.Controllers.TaskController
 		public async Task<ActionResult<IEnumerable<ToDoItemsDTO>>> GetToDoItems()
 		{
 			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			var items = await context
-				.ToDoItems.Where(t => t.UserId == userId)
+			var items = await context?
+				.ToDoItems?.Where(t => t.UserId == userId)
 				.Select(t => new ToDoItemsDTO
 				{
 					TaskId = t.TaskId,
@@ -63,8 +63,8 @@ namespace Backend.Controllers.TaskController
 		public async Task<ActionResult<ToDoItem>> GetToDoItem(int id)
 		{
 			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			var item = await context
-				.ToDoItems.Where(t => t.UserId == userId && t.TaskId == id)
+			var item = await context?
+				.ToDoItems?.Where(t => t.UserId == userId && t.TaskId == id)
 				.Select(t => new ToDoItemsDTO
 				{
 					TaskId = t.TaskId,
@@ -100,11 +100,11 @@ namespace Backend.Controllers.TaskController
 			{
 				return Unauthorized("User must be logged in");
 			}
-			var itemsQuery = context.ToDoItems.Where(t =>
+			var itemsQuery = context?.ToDoItems?.Where(t =>
 				t.UserId == userId && t.IsCompleted == false
 			);
 
-			var count = await itemsQuery.CountAsync();
+			var count = await itemsQuery?.CountAsync();
 			var items = await itemsQuery
 				.Select(t => new ToDoItemsDTO
 				{
@@ -135,11 +135,11 @@ namespace Backend.Controllers.TaskController
 			{
 				return Unauthorized("User must be logged in");
 			}
-			var itemsQuery = context.ToDoItems.Where(t =>
+			var itemsQuery = context?.ToDoItems?.Where(t =>
 				t.UserId == userId && t.IsCompleted == true
 			);
 
-			var count = await itemsQuery.CountAsync();
+			var count = await itemsQuery?.CountAsync();
 			var items = await itemsQuery
 				.Select(t => new ToDoItemsDTO
 				{
@@ -176,7 +176,7 @@ namespace Backend.Controllers.TaskController
 			if (categoryId == null && !string.IsNullOrEmpty(createToDoItemsDTO?.CategoryName))
 			{
 				// Check if the category exists globally
-				var existingCategory = await context.Categories.FirstOrDefaultAsync(c =>
+				var existingCategory = await context?.Categories?.FirstOrDefaultAsync(c =>
 					c.CategoryName == createToDoItemsDTO.CategoryName
 				);
 
@@ -314,7 +314,7 @@ namespace Backend.Controllers.TaskController
 			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 			var updateToDoItemDTO = JsonConvert.DeserializeObject<UpdateToDoItemDTO>(ToDoItem);
 
-			var toDoItem = await context.ToDoItems.FirstOrDefaultAsync(t =>
+			var toDoItem = await context?.ToDoItems?.FirstOrDefaultAsync(t =>
 				t.TaskId == id && t.UserId == userId
 			);
 
@@ -358,8 +358,8 @@ namespace Backend.Controllers.TaskController
 		public async Task<IActionResult> DeleteToDoItem(int id)
 		{
 			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			var toDoItem = await context
-				.ToDoItems.Include(t => t.Subtasks)
+			var toDoItem = await context?
+				.ToDoItems?.Include(t => t.Subtasks)
 				.Include(t => t.Recurrence)
 				.Include(t => t.Attachments)
 				.FirstOrDefaultAsync(t => t.TaskId == id && t.UserId == userId);

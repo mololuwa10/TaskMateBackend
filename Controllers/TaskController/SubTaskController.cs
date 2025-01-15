@@ -147,12 +147,6 @@ namespace Backend.Controllers.TaskController
 				return Unauthorized("User must be logged in");
 			}
 
-			// var task = await context.ToDoItems.FirstOrDefaultAsync(t => t.TaskId == updateSubTaskDTO.TaskId && t.UserId == userId);
-			// if (task == null)
-			// {
-			// 	return NotFound("Task not found or you do not have permission to update this subtask.");
-			// }
-
 			var subTask = context.SubTasks == null ? null : await context.SubTasks.FindAsync(id);
 
 			if (subTask == null)
