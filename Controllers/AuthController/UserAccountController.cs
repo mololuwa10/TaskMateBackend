@@ -6,15 +6,28 @@ using System.Threading.Tasks;
 using Backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;using Models.DTOs;
+using Microsoft.AspNetCore.Mvc;
+using Models.DTOs;
 using Models.Authorization;
+using Backend.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Controllers.AuthController
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	public class UserAccountController(UserManager<User>? userManager) : ControllerBase
+	public class UserAccountController(UserManager<User>? userManager, ApplicationDbContext? dbContext) : ControllerBase
 	{
+		// UserManager<User>? userManager, ApplicationDbContext? dbContext
+		// private readonly UserManager<User>? userManager;
+		// private readonly ApplicationDbContext? dbContext;
+
+		// public UserAccountController(UserManager<User> userManager, ApplicationDbContext dbContext)
+		// {
+		// 	this.userManager = userManager;
+		// 	this.dbContext = dbContext;
+		// }
+		
 		[HttpPut("edit-user")]
 		[Authorize]
 		public async Task<IActionResult> EditUser([FromBody] EditUserModel editUserModel) 
@@ -64,13 +77,41 @@ namespace Controllers.AuthController
 				return NotFound("User not found.");
 			}
 			
+			var toDoItems = dbContext?.ToDoItems?
+				.Where(item => item.UserId == userId)
+				.Include(item => item.Subtasks)
+				.Include(item => item.Recurrence)
+				.Include(item => item.Attachments);
+			
+			foreach (var item in toDoItems!)
+			{
+				if (item.Subtasks != null) 
+				{
+					dbContext?.SubTasks?.RemoveRange(item.Subtasks);
+				}
+				
+				if (item.Recurrence != null) 
+				{
+					dbContext?.Reccurences?.Remove(item.Recurrence);
+				}
+				
+				if (item.Attachments != null) 
+				{
+					dbContext?.Attachments?.RemoveRange(item.Attachments);
+				}
+				
+				dbContext?.ToDoItems?.Remove(item);
+			}
+			
+			await dbContext!.SaveChangesAsync();
+					
 			var deleteResult = await userManager.DeleteAsync(user);
 			if (!deleteResult.Succeeded)
 			{
 				return BadRequest("Failed to delete user.");
 			}
 
-			return Ok(new {message = "User deleted successfully"});
+			return Ok(new {message = "User and all related data deleted successfully"});
 		}
 		
 		[HttpPut("change-password")]
