@@ -99,7 +99,7 @@ namespace Backend.Controllers.AuthController
 					}
 				}
 
-				ModelState.AddModelError(string.Empty, "Invalid Login attempt");
+				return BadRequest(new { message = "Invalid Login attempt" });
 			}
 
 			return BadRequest(ModelState);
