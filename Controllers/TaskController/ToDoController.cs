@@ -21,17 +21,8 @@ namespace Backend.Controllers.TaskController
 	[ApiController]
 	[Authorize]
 	[Route("/api/todoitems")]
-	public class ToDoController : ControllerBase
+	public class ToDoController(ApplicationDbContext context) : ControllerBase
 	{
-		private readonly ApplicationDbContext context;
-		private readonly UserManager<User> userManager;
-
-		public ToDoController(ApplicationDbContext context, UserManager<User> userManager)
-		{
-			this.context = context;
-			this.userManager = userManager;
-		}
-
 		// Get Todos
 		[HttpGet]
 		public async Task<ActionResult<IEnumerable<ToDoItemsDTO>>> GetToDoItems()

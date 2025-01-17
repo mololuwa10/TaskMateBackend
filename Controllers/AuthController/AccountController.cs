@@ -16,23 +16,8 @@ namespace Backend.Controllers.AuthController
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	public class AccountController : ControllerBase
+	public class AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration) : ControllerBase
 	{
-		private readonly UserManager<User>? userManager;
-		private readonly SignInManager<User>? signInManager;
-		private readonly IConfiguration? configuration;
-
-		public AccountController(
-			UserManager<User> userManager,
-			SignInManager<User> signInManager,
-			IConfiguration configuration
-		)
-		{
-			this.userManager = userManager;
-			this.signInManager = signInManager;
-			this.configuration = configuration;
-		}
-
 		[HttpPost("register")]
 		public async Task<IActionResult> Register([FromBody] RegisterModel model)
 		{

@@ -13,15 +13,8 @@ namespace Backend.Controllers.TaskController
 {
 	[ApiController]
 	[Route("api/subtasks")]
-	public class SubTaskController : ControllerBase
+	public class SubTaskController(ApplicationDbContext context) : ControllerBase
 	{
-		private readonly ApplicationDbContext context;
-
-		public SubTaskController(ApplicationDbContext context)
-		{
-			this.context = context;
-		}
-
 		// Get all subtasks by subtask id
 		[HttpGet("{id}")]
 		public async Task<ActionResult<SubTasks>> GetSubTask(int id)

@@ -15,12 +15,12 @@ namespace Backend.Data
                 serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()
             );
 
-            if (context.Categories.Any())
+            if (context.Categories != null && context.Categories.Any())
             {
                 return;
             }
 
-            context.Categories.AddRange(
+            context?.Categories?.AddRange(
                 new Category { CategoryName = "Work" },
                 new Category { CategoryName = "Personal" },
                 new Category { CategoryName = "Health" },
@@ -37,7 +37,7 @@ namespace Backend.Data
                 new Category { CategoryName = "Goals" }
             );
 
-            context.SaveChanges();
+            context?.SaveChanges();
         }
     }
 }

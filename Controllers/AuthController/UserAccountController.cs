@@ -18,15 +18,6 @@ namespace Controllers.AuthController
 	[Route("api/[controller]")]
 	public class UserAccountController(UserManager<User>? userManager, ApplicationDbContext? dbContext) : ControllerBase
 	{
-		// UserManager<User>? userManager, ApplicationDbContext? dbContext
-		// private readonly UserManager<User>? userManager;
-		// private readonly ApplicationDbContext? dbContext;
-
-		// public UserAccountController(UserManager<User> userManager, ApplicationDbContext dbContext)
-		// {
-		// 	this.userManager = userManager;
-		// 	this.dbContext = dbContext;
-		// }
 		
 		[HttpPut("edit-user")]
 		[Authorize]
