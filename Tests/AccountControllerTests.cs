@@ -143,5 +143,44 @@ namespace Tests
 			var okResult = Assert.IsType<OkObjectResult>(result);
 			Assert.NotNull(okResult.Value);
 		}
+		
+		[Fact] 
+		public async Task Logout_AuthenticatedUser_ReturnsOk() 
+		{
+			// Arrange
+			var user = new User
+			{
+				Id = Guid.NewGuid().ToString(),
+				FirstName = "Jane",
+				LastName = "Doe",
+				UserName = "janedoe",
+				Email = "janedoe@example.com",
+				DateCreated = DateTime.UtcNow
+			};
+
+			var claims = new List<Claim>
+			{
+				new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+			};
+			
+			var identity = new ClaimsIdentity(claims);
+			var principal = new ClaimsPrincipal(identity);
+
+			_controller.ControllerContext = new ControllerContext
+			{
+				HttpContext = new DefaultHttpContext
+				{
+					User = principal
+				}
+			};
+			
+			// Act
+			var result = await _controller.Logout();
+			
+			// Assert
+			var okResult = Assert.IsType<OkObjectResult>(result);
+			Assert.NotNull(okResult.Value);
+ 
+		}
 	}
 }
