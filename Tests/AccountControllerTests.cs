@@ -34,6 +34,7 @@ namespace Tests
 				new Mock<IUserClaimsPrincipalFactory<User>>().Object,
 				null!, null!, null!, null!
 			);
+			
 			_mockConfiguration = new Mock<IConfiguration>();
 
 			_controller = new AccountController(
