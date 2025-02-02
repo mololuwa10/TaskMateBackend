@@ -19,15 +19,31 @@ var builder = WebApplication.CreateBuilder(args);
 // Load environment variables from .env file
 DotNetEnv.Env.Load();
 
-Console.WriteLine($"DB_HOST: {Env.GetString("DB_HOST")}");
-Console.WriteLine($"DB_PORT: {Env.GetString("DB_PORT")}");
-Console.WriteLine($"DB_NAME: {Env.GetString("DB_NAME")}");
-Console.WriteLine($"DB_USER: {Env.GetString("DB_USER")}");
-Console.WriteLine($"DB_PASSWORD: {Env.GetString("DB_PASSWORD")}");
-Console.WriteLine($"Kestrel url: {Env.GetString("KESTREL_URL")}");
-Console.WriteLine("Current Directory: " + Directory.GetCurrentDirectory());
+// For production (Neon DB)
+string dbHost = Env.GetString("NEON_DB_HOST");
+string dbPort = Env.GetString("NEON_DB_PORT");
+string dbName = Env.GetString("NEON_DB_NAME");
+string dbUser = Env.GetString("NEON_DB_USER");
+string dbPassword = Env.GetString("NEON_DB_PASSWORD");
+string dbSslMode = Env.GetString("NEON_DB_SSL_MODE");
 
-builder.Configuration["ConnectionStrings:DefaultConnection"] = $"Host={Env.GetString("DB_HOST")};Port={Env.GetString("DB_PORT")};Database={Env.GetString("DB_NAME")};Username={Env.GetString("DB_USER")};Password={Env.GetString("DB_PASSWORD")}";
+// For local (Postgres)
+string localDbHost = Env.GetString("DB_HOST");
+string localDbPort = Env.GetString("DB_PORT");
+string localDbName = Env.GetString("DB_NAME");
+string localDbUser = Env.GetString("DB_USER");
+string localDbPassword = Env.GetString("DB_PASSWORD");
+
+// postgresql://neondb_owner:npg_FzxsAX6cQ2ZV@ep-wispy-sunset-a87fh2zp-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
+
+// builder.Configuration["ConnectionStrings:DefaultConnection"] = $"Host={Env.GetString("DB_HOST")};Port={Env.GetString("DB_PORT")};Database={Env.GetString("DB_NAME")};Username={Env.GetString("DB_USER")};Password={Env.GetString("DB_PASSWORD")}";
+builder.Configuration["ConnectionStrings:DefaultConnection"] = 
+	builder.Environment.IsDevelopment() ? 
+		$"Host={localDbHost};Port={localDbPort};Database={localDbName};Username={localDbUser};Password={localDbPassword}" :
+		$"Host={dbHost};Port={dbPort};Database={dbName};Username={dbUser};Password={dbPassword};SslMode={dbSslMode}";
+	
+Console.WriteLine($"Using Database: {builder.Configuration["ConnectionStrings:DefaultConnection"]}");
+
 builder.Configuration["Jwt:Issuer"] = Env.GetString("JWT_ISSUER");
 builder.Configuration["Jwt:Audience"] = Env.GetString("JWT_AUDIENCE");
 builder.Configuration["Jwt:Key"] = Env.GetString("JWT_KEY");
@@ -169,12 +185,12 @@ if (!app.Environment.IsDevelopment())
 
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
-    app.UseDeveloperExceptionPage();
+	app.UseDeveloperExceptionPage();
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+	app.UseExceptionHandler("/Home/Error");
+	app.UseHsts();
 }
 
 // Comment out this middleware if HTTPS is not required:
