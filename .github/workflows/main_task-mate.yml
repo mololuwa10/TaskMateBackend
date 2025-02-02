@@ -65,4 +65,3 @@ jobs:
           app-name: 'task-mate'
           slot-name: 'Production'
           package: .
-          
